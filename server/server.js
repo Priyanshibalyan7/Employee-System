@@ -9,7 +9,11 @@ app.use(cors({
     origin:'*',
     methods:['GET','POST','PUT','DELETE']
 }))
+app.get('/',(req,res)=>{
+    message:"backend connected successfully";
+    success:true;
 
+})
 app.use(express.json())
 app.use(route)
 const port = process.env.PORT;
